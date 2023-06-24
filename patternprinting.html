@@ -1,0 +1,49 @@
+<html>
+<body>
+<h2>Pattern Printing</h2>
+<h4>******<br>&nbsp;&nbsp;***<br>&nbsp;&nbsp;&nbsp;&nbsp;*<br>&nbsp;&nbsp;***<br>******<br>
+</h4>
+<p>Output is printed in the console</p>
+<script>
+console.log("Pattern Printing");
+var a =3;
+console.log(a);
+var out ="";
+for(var i=1;i<a;i++)
+	{
+		out="";
+		for(var j=1;j<=i;j++)
+		{
+			out+=" ";
+		}
+		for(var j=i;j<a;j++)
+		{
+			out+="*";
+		}
+		for(var j=i;j<=a;j++)
+		{
+			out+="*";
+		}
+		
+		console.log(out);
+	}
+	for(var i=1;i<=a;i++)
+	{
+		out="";
+		for(var j=i;j<=a;j++)
+		{
+			out+=" ";
+		}
+		for(var j=1;j<i;j++)
+		{
+			out+="*";
+		}
+		for(var j=1;j<=i;j++)
+		{
+			out+="*";
+		}
+		
+		console.log(out);
+	}
+	
+</script>

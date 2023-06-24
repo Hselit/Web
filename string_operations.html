@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Pattern Printing</title>
+	</head>
+	<body>
+		<h2>JavaScript basic String Operations</h2>
+		<p>Results are displayed in the console</p>
+	<script>
+		console.log("Question 2");
+		var n = prompt("Enter the String");
+		console.log(n);
+		var l=n.length;
+		console.log("Length of the String :"+l);
+			var s = "";
+			s+=n.charAt(0);
+			for(var i=0;i<l;i++)
+			{
+				if(n.charAt(i)==" ")
+				{
+					s=s+n.charAt(i+1);
+				}
+			}
+			console.log(s);
+			console.log("Slice Operation");
+			console.log(n.slice(1,4));
+			console.log("Uppercase");
+			var up = n.toUpperCase();
+			console.log(up);
+			console.log("Case Swap");
+			var ne="";
+			for(var i=0;i<l;i++){
+			if(n.charAt(i) == n.charAt(i).toUpperCase())
+				{
+					ne+=n.charAt(i).toLowerCase();
+				}
+			else
+				{
+					ne+=n.charAt(i).toUpperCase();
+				}
+			}
+			console.log(ne);
+			
+			
+	</script>
+	</body>
+</html>
