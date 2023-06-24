@@ -1,0 +1,101 @@
+
+
+<html>
+	<head>
+	<title>Block Movement</title>
+	</head>
+	<style>
+	
+		#block{
+		background-color:red;
+		width:100px;
+		height:100px;
+		border-radius:10px;
+		position:absolute;
+		z-index=0;
+		}
+		
+		#buts{
+		background-color:aqua;
+		margin-top:400px;
+		padding:10px;
+		z-index=2;
+		}
+	</style>
+	
+	<body>
+		<div>
+		<div id="block">
+		</div>
+		<br><br><br><br><br>
+		</div>
+		
+		<div id="buts">
+		&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		<button id="f" onclick="forward()">Forward</button>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		<button id="b" onclick="backward()">Backward</button>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		<button id="u" onclick="up()">Up</button>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		<button id="d" onclick="down()">Down</button>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		<button id="c" onclick="Change()">Change</button>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		<button id="ma" onclick="max()">Max</button>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		<button id="mi" onclick="min()">Min</button>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		
+		</div>
+		
+		<script>
+		var wid =10;
+		var i = document.getElementById("block");
+			function forward()
+			{
+				wid=wid+10;				
+				i.style.marginLeft = wid+"px";
+			
+			}
+			
+			function backward()
+			{
+				wid=wid-10;				
+				i.style.marginLeft = wid+"px";
+			
+			}
+			
+			function up()
+			{
+				wid=wid-10;				
+				i.style.marginTop = wid+"px";
+			
+			}
+			
+			function down()
+			{
+				wid=wid+10;				
+				i.style.marginTop = wid+"px";
+			
+			}
+			var j=1;
+			function Change()
+			{
+				
+				var color = ["red","blue","green","aqua","white","black"];				
+				i.style.backgroundColor = color[j];
+				j++;
+				if(j==6){
+				j=1;
+				}
+				
+			}
+			function min()
+			{
+				wid=wid-10;				
+				i.style.width = wid+"px";
+				i.style.height = wid+"px";
+			}
+			function max()
+			{
+				wid=wid+10;				
+				i.style.width = wid+"px";
+				i.style.height = wid+"px";
+			}
+			</script>
+	</body>
+	</html>
